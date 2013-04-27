@@ -1,20 +1,23 @@
 #APLCalendar
 
 First include the header file
+
 	#import "APLCalendar.h"
 
 Then add the APLCalendarDelegate
+
 	@interface ViewController : UIViewController <APLCalendarDelegate> {
     
 	    APLCalendar *cal; // create a calendar object
     
 	}
 
-@end
+	@end
 
 Initialize the calendar and add it the view.
-	- (void)viewDidLoad
-	{
+	
+	- (void)viewDidLoad {
+	
 	    cal = [[APLCalendar alloc] initWithFrame:CGRectMake(5, 50, self.view.frame.size.width, self.view.frame.size.width)];
 	    [cal setDelegate:self];
 	    [self.view addSubview:cal];
